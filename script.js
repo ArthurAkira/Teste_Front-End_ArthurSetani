@@ -6,12 +6,12 @@ let relations = []
 let teachers = []
 
 async function fetchData() {
-    students  = await fetch('../students.json').then(r => r.json())
-    degrees   = await fetch('../degrees.json').then(r => r.json())
-    classes   = (await fetch('../classes.json').then(r => r.json())).classes
-    matters   = await fetch('../matters.json').then(r => r.json())
-    relations = await fetch('../relationships.json').then(r => r.json())
-    teachers  = await fetch('../teachers.json').then(r => r.json())
+    students  = await fetch('./students.json').then(r => r.json())
+    degrees   = await fetch('./degrees.json').then(r => r.json())
+    classes   = (await fetch('./classes.json').then(r => r.json())).classes
+    matters   = await fetch('./matters.json').then(r => r.json())
+    relations = await fetch('./relationships.json').then(r => r.json())
+    teachers  = await fetch('./teachers.json').then(r => r.json())
 
     loadFilter()
     loadFormSelects()
@@ -258,3 +258,4 @@ function showFormMessage(text, type) {
 }
 
 fetchData()
+
